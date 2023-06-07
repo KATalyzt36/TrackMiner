@@ -1,0 +1,107 @@
+es:
+  hi: |
+    ¡Hola {user}! 👋
+    Te doy la bienvenida a *¡TrackMiner!*.
+    Para descargar una canción, deberás enviar un enlace de YouTube y en breve te enviaré la canción en formato M4A.
+    Siempre que tengas dudas, puedes usar el comando /help 😊
+    ¡Recuerda que puedes usar /lang para establecer tu propio idioma!
+  help: |
+    Solo acepto enlaces de youtube que empiecen con:
+    https://youtube.com/
+    https://www.youtube.com/
+    http://youtube.com/
+    http://www.youtube.com/
+    https://youtu.be/
+    https://www.youtu.be/
+    http://youtu.be/
+    http://www.youtu.be/
+    youtube.com/
+    www.youtube.com/
+    youtu.be/
+    www.youtu.be/
+    Seguido del ID de tu canción
+
+    Ejemplo: https://www.youtube.com/watch?v=gUcisIlT7sM
+
+    ¿Tienes alguna duda, consulta o quieres reportar un bug?
+    Usá /contact 👋
+  contact: |
+    ¿Has encontrado un bug o tienes alguna duda? 😱 ¡Contactame!
+    https://t.me/KATalyz 👋
+  lang: |
+    💭 Elige tu idioma 💭
+  lang_changed: |
+    ¡Idioma cambiado a 🇪🇸 ESPAÑOL!
+  command_doesnt_exist: |
+    Ese comando no existe :(
+  obtaining_info: |
+    🕒 _ Obteniendo información. Espera por favor... _ 🕒
+  file_info: |
+    🎬 {title}
+    👤 {channel}
+    🕒 {duration}
+    💾 {filesize}
+  preparing_file: |
+    📤 _ Enviando archivo... _
+  file_sent: |
+    ✅ _ ¡Archivo enviado! _
+  error_to_download_info: |
+    ¡Ha ocurrido un error al descargar la informacion o el archivo! :(
+  no_link_received: |
+    ¡No has enviado un enlace válido! :(
+    ¡Intentalo de nuevo!
+    /help
+en:
+  hi: |
+    Hello {user}! 👋
+    I welcome you to TrackMiner!.
+    To download a song, you'll need to send a YouTube link and I'll shortly send you the song in M4A format.
+    If you ever have any questions, feel free to use the /help command 😊
+    Remember that you can use /lang to set your own language!
+  help: |
+    I only accept YouTube links that start with:
+    https://youtube.com/
+    https://www.youtube.com/
+    http://youtube.com/
+    http://www.youtube.com/
+    https://youtu.be/
+    https://www.youtu.be/
+    http://youtu.be/
+    http://www.youtu.be/
+    youtube.com/
+    www.youtube.com/
+    youtu.be/
+    www.youtu.be/
+
+    Followed by the ID of your song.
+
+    Example: https://www.youtube.com/watch?v=gUcisIlT7sM
+
+    Do you have any questions, inquiries, or want to report a bug?
+    Use /contact 👋
+  contact: |
+    Have you found a bug or do you have any questions? 😱 Contact me!
+    https://t.me/KATalyz 👋
+  lang: |
+    💭 Choose your language 💭
+  lang_changed: |
+    Language changed to 🇺🇸 ENGLISH!
+  command_doesnt_exist: |
+    Command doesn't exist :(
+  obtaining_info: |
+    🕒 _ Gathering information. Please wait... _ 🕒
+  file_info: |
+    🎬 {title}
+    👤 {channel}
+    🕒 {duration}
+    💾 {filesize}
+  preparing_file: |
+    📤 _ Sending file... _
+  file_sent: |
+    ✅ _ File sent! _
+  error_to_download_info: |
+    An error occurred while downloading the information or file! :(
+  no_link_received: |
+    You haven't sent a valid link! :(
+    Please try again!
+    /help

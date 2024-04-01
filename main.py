@@ -175,7 +175,7 @@ def bot_mensajes_texto(message):
 
 if __name__ == '__main__':
     os.system('clear')
-    print("---BOT STARTED---")
+    print("--- TRACK MINER BOT STARTED---")
     bot.set_my_commands([
         telebot.types.BotCommand("/start", "👋 Launch bot"),
         telebot.types.BotCommand("/help", "✏ A little help"),

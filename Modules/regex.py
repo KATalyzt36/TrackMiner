@@ -1,4 +1,4 @@
-import  re
+import re
 
 def get_nombre_ext(n_file):
     return re.search(r"[^/\\]*$", n_file).group()

@@ -33,7 +33,7 @@ es:
   lang_changed: |
     ¡Idioma cambiado a 🇪🇸 ESPAÑOL!
   command_doesnt_exist: |
-    Ese comando no existe :(
+    Ese comando no existe 😔
   obtaining_info: |
     🕒 _ Obteniendo información. Espera por favor... _ 🕒
   file_info: |
@@ -46,11 +46,19 @@ es:
   file_sent: |
     ✅ _ ¡Archivo enviado! _
   error_to_download_info: |
-    ¡Ha ocurrido un error al descargar la informacion o el archivo! :(
+    ¡Ha ocurrido un error al descargar la informacion o el archivo! 😔
+  error_playlist_in_url: |
+    Has introducido un link perteneciente a una lista 😔
+    (Opcion actualmente no soportada)
+    ¡Se descargará la canción encontrada en la URL!
   no_link_received: |
-    ¡No has enviado un enlace válido! :(
+    ¡No has enviado un enlace válido! 😔
     ¡Intentalo de nuevo!
     /help
+
+
+
+
 en:
   hi: |
     Hello {user}! 👋
@@ -87,7 +95,7 @@ en:
   lang_changed: |
     Language changed to 🇺🇸 ENGLISH!
   command_doesnt_exist: |
-    Command doesn't exist :(
+    Command doesn't exist 😔
   obtaining_info: |
     🕒 _ Gathering information. Please wait... _ 🕒
   file_info: |
@@ -100,8 +108,12 @@ en:
   file_sent: |
     ✅ _ File sent! _
   error_to_download_info: |
-    An error occurred while downloading the information or file! :(
+    An error occurred while downloading the information or file! 😔
+  error_playlist_in_url: |
+    You have entered a link belonging to a list 😔
+    (Option currently not supported)
+    The song found in the URL will be downloaded!
   no_link_received: |
-    You haven't sent a valid link! :(
+    You haven't sent a valid link! 😔
     Please try again!
     /help

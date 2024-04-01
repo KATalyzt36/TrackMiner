@@ -5,6 +5,7 @@ import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import os
 import yaml
+import re
 
 ### MODULES
 from Modules import regex, image_handler, format, ytdlp, download
@@ -112,6 +113,12 @@ def bot_mensajes_texto(message):
     else:
         if any(message.text.startswith(prefix) for prefix in URLS):
             url = message.text
+            if url.find("&list") != -1:
+                bot.reply_to(message,
+                             get_msg(db.get_language(message.from_user.id), 'error_playlist_in_url'),
+                             disable_web_page_preview=True)
+                url = re.sub(r"&list=.*", "", url)
+
             waiting_msg = bot.reply_to(message, get_msg(db.get_language(message.from_user.id), 'obtaining_info'), parse_mode="Markdown")
 
             try:
@@ -167,7 +174,7 @@ def bot_mensajes_texto(message):
 
 
 if __name__ == '__main__':
-    os.system('cls')
+    os.system('clear')
     print("---BOT STARTED---")
     bot.set_my_commands([
         telebot.types.BotCommand("/start", "👋 Launch bot"),

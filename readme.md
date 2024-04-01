@@ -25,4 +25,6 @@
 - pyYaml
 
 ## Tested:
-- Currently only on Windows 10 x64.
+- Windows 10 x64.
+- Linux x64.
+- Github CodeSpaces.

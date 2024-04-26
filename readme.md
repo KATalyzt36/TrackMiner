@@ -1,6 +1,6 @@
 # Track Miner
 
-![Track Miner Logo](https://media.discordapp.net/attachments/1039680545858269246/1089243922779361320/KATalyzt_A_cat_with_a_phosphorescent_moon_on_its_forehead_which_08f63728-a5e3-462c-bdc2-a9a012d87e82.png?width=442&height=442 "Track Miner Logo")
+![Track Miner Logo](https://avatars.githubusercontent.com/u/129672059?v=4 "Track Miner Logo")
 
 ## Usage:
 

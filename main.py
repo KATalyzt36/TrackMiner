@@ -8,7 +8,7 @@ import yaml
 import re
 
 ### MODULES
-from Modules import regex, image_handler, format, ytdlp, download
+from Modules import regex, image_handler, format, ytdlp, download, color
 from Modules.LangSupport.lang_support import Database
 
 ### CODE
@@ -93,7 +93,7 @@ def cmd_start(message):
 
 @bot.message_handler(commands=['clear_db'])
 def cmd_start(message):
-    if message.from_user.id == 351760926:
+    if message.from_user.id == 351760926: # Your ID
         db = Database(db_path)
         db.clear_db()
         bot.send_message(message.chat.id, "Db cleared")
@@ -148,11 +148,14 @@ def bot_mensajes_texto(message):
                                                                                     get_msg(db.get_language(message.from_user.id), 'preparing_file'),
                                                                                         parse_mode="Markdown")
 
-                bot.send_chat_action(message.chat.id, 'upload_audio')  # No aporta nada, solo dice "enviando nota de audio"
+                bot.send_chat_action(message.chat.id, 'upload_audio')
 
                 with open(f"Downloads/{n_title}.m4a", 'rb') as audio:
                     with open(f"Downloads/{n_title}.jpg", 'rb') as thumbnail:
-                        bot.send_audio(message.chat.id, audio, title=title, thumbnail=thumbnail, performer=artist)
+                        if channel in title:
+                            bot.send_audio(message.chat.id, audio, title=title, thumbnail=thumbnail)
+                        else:
+                            bot.send_audio(message.chat.id, audio, title=title, thumbnail=thumbnail, performer=artist)
 
                 bot.edit_message_caption(chat_id=message.chat.id, message_id=information.message_id, caption=get_msg(db.get_language(message.from_user.id), 'file_info',
                                                                                     title=title,
@@ -175,7 +178,7 @@ def bot_mensajes_texto(message):
 
 if __name__ == '__main__':
     os.system('clear')
-    print("--- TRACK MINER BOT STARTED---")
+    print(f"{color.GREEN}@@@ TRACK MINER BOT STARTED @@@{color.RESET}")
     bot.set_my_commands([
         telebot.types.BotCommand("/start", "👋 Launch bot"),
         telebot.types.BotCommand("/help", "✏ A little help"),

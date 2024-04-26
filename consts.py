@@ -11,7 +11,7 @@ URLS = [
             "www.youtube.com",
             "youtu.be/",
             "www.youtu.be/",
-            "https://m.youtube.com/,
+            "https://m.youtube.com/",
             "http://m.youtube.com/",
-            "m.youtube.com/
+            "m.youtube.com/"
         ]

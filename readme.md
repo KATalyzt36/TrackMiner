@@ -18,11 +18,8 @@
 ## Dependencies:
 - FFMPEG
 
-### Use pip install to install the following Python dependencies:
-- pyTelegramBotAPI
-- yt-dlp
-- pillow
-- pyYaml
+### Install all dependencies:
+python -m install -r requeriments.txt
 
 ## Tested:
 - Windows 10 x64.

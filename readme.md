@@ -19,7 +19,9 @@
 - FFMPEG
 
 ### Install all dependencies:
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 ## Tested:
 - Windows 10 x64.

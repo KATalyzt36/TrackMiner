@@ -99,10 +99,10 @@ def cmd_start(message):
         bot.send_message(message.chat.id, "Db cleared")
 
 
-@bot.message_handler(commands=['userid'])
+@bot.message_handler(commands=['active'])
 def cmd_start(message):
-    print(message.from_user.id)
-
+    db = Database(db_path)
+    bot.send_message(message.chat.id, "✅"+ get_msg(db.get_language(message.from_user.id), "active") +"✅")
 
 @bot.message_handler(content_types=["text"])
 def bot_mensajes_texto(message):

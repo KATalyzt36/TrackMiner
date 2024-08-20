@@ -5,8 +5,10 @@ es:
     Para descargar una canción, deberás enviar un enlace de YouTube y en breve te enviaré la canción en formato M4A.
     Siempre que tengas dudas, puedes usar el comando /help 😊
     ¡Recuerda que puedes usar /lang para establecer tu propio idioma!
+    ¡Y /active para verificar si el bot está en funcionamiento!
   help: |
     Solo acepto enlaces de youtube que empiecen con:
+    
     https://youtube.com/
     https://www.youtube.com/
     http://youtube.com/
@@ -19,6 +21,7 @@ es:
     www.youtube.com/
     youtu.be/
     www.youtu.be/
+    
     Seguido del ID de tu canción
 
     Ejemplo: https://www.youtube.com/watch?v=gUcisIlT7sM
@@ -55,6 +58,8 @@ es:
     ¡No has enviado un enlace válido! 😔
     ¡Intentalo de nuevo!
     /help
+  active: |
+    TrackMiner está activo
 
 
 
@@ -62,12 +67,14 @@ es:
 en:
   hi: |
     Hello {user}! 👋
-    I welcome you to TrackMiner!.
+    Welcome to *TrackMiner!*.
     To download a song, you'll need to send a YouTube link and I'll shortly send you the song in M4A format.
     If you ever have any questions, feel free to use the /help command 😊
     Remember that you can use /lang to set your own language!
+    And /active to check if the bot is running!
   help: |
     I only accept YouTube links that start with:
+    
     https://youtube.com/
     https://www.youtube.com/
     http://youtube.com/
@@ -81,7 +88,7 @@ en:
     youtu.be/
     www.youtu.be/
 
-    Followed by the ID of your song.
+    Followed by ID of your song.
 
     Example: https://www.youtube.com/watch?v=gUcisIlT7sM
 
@@ -117,3 +124,5 @@ en:
     You haven't sent a valid link! 😔
     Please try again!
     /help
+  active: |
+    TrackMiner is active

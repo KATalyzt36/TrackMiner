@@ -1,6 +1,6 @@
 import urllib.request
 
-def download_file(url,name):
+def file(url, name):
     ext = '.jpg'
     if url.endswith('.webp'):
         ext = '.webp'

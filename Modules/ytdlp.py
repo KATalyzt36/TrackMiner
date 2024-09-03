@@ -1,18 +1,33 @@
 import os
 import yt_dlp
 
-ydl_opts = {
-    'format': 'bestaudio/best',
-    'postprocessors': [{
-        'key': 'FFmpegExtractAudio',
-        'preferredcodec': 'm4a',
-        'preferredquality': '192',
-    }],
-    'ffmpeg_location': './ffmpeg/bin',
-    'outtmpl': os.path.join(os.getcwd(), './Downloads', '%(title)s.%(ext)s'),
-    'nooverwrites': True,
-    'restrictfilenames': True
-}
+import main
+
+if main.useCustomFFMPEG:
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'm4a',
+            'preferredquality': '192',
+        }],
+        'ffmpeg_location': main.ffmpegRoute,
+        'outtmpl': os.path.join(os.getcwd(), './Downloads', '%(title)s.%(ext)s'),
+        'nooverwrites': True,
+        'restrictfilenames': True
+    }
+else:
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'm4a',
+            'preferredquality': '192',
+        }],
+        'outtmpl': os.path.join(os.getcwd(), './Downloads', '%(title)s.%(ext)s'),
+        'nooverwrites': True,
+        'restrictfilenames': True
+    }
 
 
 def download_song(url):

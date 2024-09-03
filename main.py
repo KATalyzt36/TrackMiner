@@ -11,6 +11,10 @@ import re
 from Modules import regex, image_handler, format, ytdlp, download, color
 from Modules.LangSupport.lang_support import Database
 
+# Options
+useCustomFFMPEG = False # If this is true, uses your ffmpeg from './ffmpeg/bin' else use your system ffmpeg
+ffmpegRoute = './ffmpeg/bin' # Fill this if "useCustomFFMPEG" is "True"
+
 ### CODE
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
 db_path = 'Modules/LangSupport/lang_for_user.db'
@@ -131,7 +135,7 @@ def bot_mensajes_texto(message):
 
                 bot.delete_message(message.chat.id, waiting_msg.message_id)
 
-                download.download_file(thumbnail, n_title)
+                download.file(thumbnail, n_title)
 
                 if not thumbnail.endswith(".jpg"):
                     image_handler.convert_to_jpg(n_title)
@@ -150,7 +154,12 @@ def bot_mensajes_texto(message):
 
                 bot.send_chat_action(message.chat.id, 'upload_audio')
 
-                with open(f"Downloads/{n_title}.m4a", 'rb') as audio:
+                if useCustomFFMPEG:
+                    os.system(ffmpegRoute + f'/ffmpeg -i Downloads/{n_title}.m4a -c:v copy -c:a libmp3lame -q:a 4 Downloads/{n_title}.mp3')
+                else:
+                    os.system(f'ffmpeg -i Downloads/{n_title}.m4a -c:v copy -c:a libmp3lame -q:a 4 Downloads/{n_title}.mp3')
+
+                with open(f"Downloads/{n_title}.mp3", 'rb') as audio:
                     with open(f"Downloads/{n_title}.jpg", 'rb') as thumbnail:
                         if channel in title:
                             bot.send_audio(message.chat.id, audio, title=title, thumbnail=thumbnail)
@@ -167,6 +176,7 @@ def bot_mensajes_texto(message):
 
                 os.remove(f'Downloads/{n_title}.jpg')
                 os.remove(f'Downloads/{n_title}.m4a')
+                os.remove(f'Downloads/{n_title}.mp3')
 
             except Exception as e:
                 bot.reply_to(message, get_msg(db.get_language(message.from_user.id), 'error_to_download_info'))

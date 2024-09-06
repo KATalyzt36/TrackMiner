@@ -8,12 +8,13 @@ import yaml
 import re
 
 ### MODULES
-from Modules import regex, image_handler, format, ytdlp, download, color
+from Modules import regex, image_handler, format, ytdlp, download, color, paths
 from Modules.LangSupport.lang_support import Database
 
 # Options
-useCustomFFMPEG = False # If this is true, uses your ffmpeg from './ffmpeg/bin' else use your system ffmpeg
-ffmpegRoute = './ffmpeg/bin' # Fill this if "useCustomFFMPEG" is "True"
+useCustomFFMPEG = True # If this is true, uses your ffmpeg from './ffmpeg/bin' else use your system ffmpeg
+ffmpegRoute = paths.convert_to_windows("ffmpeg/bin") # Fill this if "useCustomFFMPEG" is "True"
+ffmpegExec = ffmpegRoute + paths.convert_to_windows("/ffmpeg.exe")
 
 ### CODE
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
@@ -155,7 +156,7 @@ def bot_mensajes_texto(message):
                 bot.send_chat_action(message.chat.id, 'upload_audio')
 
                 if useCustomFFMPEG:
-                    os.system(ffmpegRoute + f'/ffmpeg -i Downloads/{n_title}.m4a -c:v copy -c:a libmp3lame -q:a 4 Downloads/{n_title}.mp3')
+                    os.system(ffmpegExec + f' -i Downloads/{n_title}.m4a -c:v copy -c:a libmp3lame -q:a 4 Downloads/{n_title}.mp3')
                 else:
                     os.system(f'ffmpeg -i Downloads/{n_title}.m4a -c:v copy -c:a libmp3lame -q:a 4 Downloads/{n_title}.mp3')
 

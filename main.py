@@ -17,7 +17,15 @@ ffmpegRoute = paths.convert_to_windows("ffmpeg/bin") # Fill this if "useCustomFF
 ffmpegExec = ffmpegRoute + paths.convert_to_windows("/ffmpeg.exe")
 
 ### CODE
-bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
+TOKEN = ""
+ENV_TOKEN = os.environ.get("TRACK_MINER_TOKEN")
+if ENV_TOKEN != None:
+    TOKEN = ENV_TOKEN
+else:
+    TOKEN = TELEGRAM_BOT_TOKEN
+
+bot = telebot.TeleBot(TOKEN)
+#bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
 db_path = 'Modules/LangSupport/lang_for_user.db'
 
 # Charge Langs

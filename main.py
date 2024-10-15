@@ -34,8 +34,13 @@ with open('Modules/LangSupport/lang.yaml', 'r', encoding='utf-8') as f:
 
 
 # Functions
+# def get_msg(lang_code, msg_key, **kwargs):
+    # return lang[lang_code][msg_key].format(**kwargs)  # get_msg('es','help', variable=valor_variable)
+
 def get_msg(lang_code, msg_key, **kwargs):
-    return lang[lang_code][msg_key].format(**kwargs)  # get_msg('es','help', variable=valor_variable)
+    with open(f'Modules/LangSupport/{lang_code}.yaml', 'r', encoding='utf-8') as f:
+        lang = yaml.safe_load(f)
+        return lang[msg_key].format(**kwargs)
 
 
 def gen_markup():

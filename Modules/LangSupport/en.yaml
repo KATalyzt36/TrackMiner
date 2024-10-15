@@ -1,0 +1,61 @@
+hi: |
+  Hello {user}! 👋
+  Welcome to *TrackMiner!*.
+  To download a song, you'll need to send a YouTube link and I'll shortly send you the song in M4A format.
+  If you ever have any questions, feel free to use the /help command 😊
+  Remember that you can use /lang to set your own language!
+  And /active to check if the bot is running!
+help: |
+  I only accept YouTube links that start with:
+  
+  https://youtube.com/
+  https://www.youtube.com/
+  http://youtube.com/
+  http://www.youtube.com/
+  https://youtu.be/
+  https://www.youtu.be/
+  http://youtu.be/
+  http://www.youtu.be/
+  youtube.com/
+  www.youtube.com/
+  youtu.be/
+  www.youtu.be/
+
+  Followed by ID of your song.
+
+  Example: https://www.youtube.com/watch?v=gUcisIlT7sM
+
+  Do you have any questions, inquiries, or want to report a bug?
+  Use /contact 👋
+contact: |
+  Have you found a bug or do you have any questions? 😱 Contact me!
+  https://t.me/KATalyz 👋
+lang: |
+  💭 Choose your language 💭
+lang_changed: |
+  Language changed to 🇺🇸 ENGLISH!
+command_doesnt_exist: |
+  Command doesn't exist 😔
+obtaining_info: |
+  🕒 _ Gathering information. Please wait... _ 🕒
+file_info: |
+  🎬 {title}
+  👤 {channel}
+  🕒 {duration}
+  💾 {filesize}
+preparing_file: |
+  📤 _ Sending file... _
+file_sent: |
+  ✅ _ File sent! _
+error_to_download_info: |
+  An error occurred while downloading the information or file! 😔
+error_playlist_in_url: |
+  You have entered a link belonging to a list 😔
+  (Option currently not supported)
+  The song found in the URL will be downloaded!
+no_link_received: |
+  You haven't sent a valid link! 😔
+  Please try again!
+  /help
+active: |
+  TrackMiner is active

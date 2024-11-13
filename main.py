@@ -12,7 +12,7 @@ from Modules import regex, image_handler, format, ytdlp, download, color, paths
 from Modules.LangSupport.lang_support import Database
 
 # Options
-useCustomFFMPEG = True # If this is true, uses your ffmpeg from './ffmpeg/bin' else use your system ffmpeg
+useCustomFFMPEG = False # If this is True, uses your ffmpeg from './ffmpeg/bin' else use your system ffmpeg (False) NOTE: If u want to make an Docker image, set this to False
 ffmpegRoute = paths.convert_to_windows("ffmpeg/bin") # Fill this if "useCustomFFMPEG" is "True"
 ffmpegExec = ffmpegRoute + paths.convert_to_windows("/ffmpeg.exe")
 
@@ -26,11 +26,11 @@ else:
 
 bot = telebot.TeleBot(TOKEN)
 #bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
-db_path = 'Modules/LangSupport/lang_for_user.db'
+db_path = 'Modules/LangSupport/data/lang_for_user.db'
 
 # Charge Langs
-with open('Modules/LangSupport/lang.yaml', 'r', encoding='utf-8') as f:
-    lang = yaml.safe_load(f)
+#with open('Modules/LangSupport/lang.yaml', 'r', encoding='utf-8') as f:
+#    lang = yaml.safe_load(f)
 
 
 # Functions
@@ -38,7 +38,7 @@ with open('Modules/LangSupport/lang.yaml', 'r', encoding='utf-8') as f:
     # return lang[lang_code][msg_key].format(**kwargs)  # get_msg('es','help', variable=valor_variable)
 
 def get_msg(lang_code, msg_key, **kwargs):
-    with open(f'Modules/LangSupport/{lang_code}.yaml', 'r', encoding='utf-8') as f:
+    with open(f'Modules/LangSupport/langs/{lang_code}.yaml', 'r', encoding='utf-8') as f:
         lang = yaml.safe_load(f)
         return lang[msg_key].format(**kwargs)
 

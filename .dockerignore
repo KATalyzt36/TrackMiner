@@ -1,0 +1,8 @@
+.git
+.idea
+__pycache__
+Downloads
+ffmpeg
+venv
+.gitignore
+readme.md

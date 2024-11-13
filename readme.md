@@ -23,6 +23,32 @@
 pip install -r requirements.txt
 ```
 
+# New! Docker added!
+
+
+## Now, you can get a docker image making it and make a container of it with this command
+
+
+### Windows: 
+```powershell
+docker run -d `
+--name Container_Name `
+--restart unless-stopped `
+-e TRACK_MINER_TOKEN= TOKEN `
+-v trackminer_data:/app/Modules/LangSupport/data `
+trackminer:latest
+```
+
+### Linux:
+```bash
+docker run -d \
+--name Container_Name \
+--restart unless-stopped \
+-e TRACK_MINER_TOKEN= TOKEN \
+-v trackminer_data:/app/Modules/LangSupport/data \
+trackminer:latest
+```
+
 ## Tested:
 - Windows 10 x64.
 - Linux x64.

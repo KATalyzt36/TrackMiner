@@ -49,6 +49,24 @@ docker run -d \
 trackminer:latest
 ```
 
+### Docker-Compose (Not tested)
+```yml
+version: '3.8'
+
+services:
+  trackminer:
+    image: trackminer:latest
+    container_name: Container_Name
+    restart: unless-stopped
+    environment:
+      - TRACK_MINER_TOKEN= TOKEN
+    volumes:
+      - trackminer_data:/app/Modules/LangSupport/data
+
+volumes:
+  trackminer_data:
+```
+
 ## Tested:
 - Windows 10 x64.
 - Linux x64.

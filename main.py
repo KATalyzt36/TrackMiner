@@ -26,7 +26,7 @@ else:
 
 bot = telebot.TeleBot(TOKEN)
 #bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
-db_path = 'Modules/LangSupport/data/lang_for_user.db'
+db_path = 'Modules/LangSupport/lang_for_user.db'
 
 # Charge Langs
 #with open('Modules/LangSupport/lang.yaml', 'r', encoding='utf-8') as f:

@@ -19,4 +19,4 @@ COPY . /app
 # Install dependencies without cache
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "main.py"]
+CMD ["sh", "-c", "pip install --upgrade yt-dlp && python main.py"]

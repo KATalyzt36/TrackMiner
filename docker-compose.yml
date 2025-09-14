@@ -2,11 +2,11 @@ version: '3.8'
 
 services:
   trackminer:
-    image: trackminer:latest
-    container_name: Container_Name
+    image: katalyzt36/trackminer:latest
+    container_name: TrackMiner
     restart: unless-stopped
     environment:
-      - TRACK_MINER_TOKEN= TOKEN
+      - TRACK_MINER_TOKEN= [TOKEN]
     volumes:
       - trackminer_data:/app/Modules/LangSupport/data
 

@@ -6,7 +6,7 @@ services:
     container_name: TrackMiner
     restart: unless-stopped
     environment:
-      - TRACK_MINER_TOKEN= [TOKEN]
+      - TRACK_MINER_TOKEN=${TRACK_MINER_TOKEN}
     volumes:
       - trackminer_data:/app/Modules/LangSupport/data
 
